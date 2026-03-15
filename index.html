@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prakruthi S | Portfolio</title>
+  <style>
+    :root {
+      --bg: #f4f1ea;
+      --surface: #fffaf2;
+      --text: #1d1d1f;
+      --muted: #5b5f66;
+      --primary: #0d6e6e;
+      --accent: #d97706;
+      --border: #e8dcc8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(45deg, #ffb3d9, #ffffff, #ffc0e0, #ffe6f2);
+      background-size: 400% 400%;
+      animation: gradientShift 4s ease infinite;
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 32px 18px;
+      transition: background-position 0.3s ease;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      padding: 54px 28px 36px;
+      background: linear-gradient(120deg, #fef3c7 0%, #d1fae5 100%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .avatar {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+      flex-shrink: 0;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      margin-bottom: 10px;
+      letter-spacing: 0.3px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      color: #24303a;
+      font-size: 1.05rem;
+    }
+
+    .sections {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      padding: 26px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .card h2 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .skill {
+      background: #eef9f9;
+      color: #0d4f4f;
+      border: 1px solid #b9e2e2;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.93rem;
+      font-weight: 600;
+    }
+
+    .highlight {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .contact {
+      padding: 8px 26px 28px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .social-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 170px;
+    }
+
+    .social-btn {
+      display: inline-block;
+      margin-top: 14px;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: 600;
+      width: 140px;
+      text-align: center;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .social-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .linkedin-btn {
+      background: #0a66c2;
+      border: 1px solid #0858a8;
+    }
+
+    .linkedin-btn:hover {
+      background: #0858a8;
+    }
+
+    .github-btn {
+      background: #24292f;
+      border: 1px solid #1b1f23;
+    }
+
+    .github-btn:hover {
+      background: #1b1f23;
+    }
+
+    @media (max-width: 767px) {
+      .social-btn {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .sections {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <img src="profile.jpg" alt="Prakruthi S profile photo" class="avatar" />
+        <div>
+          <h1>Prakruthi S</h1>
+          <p>
+            Engineering student focused on building reliable web applications
+            while strengthening core computer science fundamentals through
+            hands-on projects.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sections">
+      <article class="card">
+        <h2>Career Objective</h2>
+        <p>
+          Motivated engineering student with a strong interest in software
+          development, problem-solving, and modern web technologies, seeking
+          internship opportunities to contribute and grow in real-world teams.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Core Skills</h2>
+        <div class="skills">
+          <span class="skill">HTML5</span>
+          <span class="skill">CSS3</span>
+          <span class="skill">Java</span>
+          <span class="skill">Python</span>
+          <span class="skill">OOP</span>
+          <span class="skill">Data Structures</span>
+          <span class="skill">Responsive Web Design</span>
+          <span class="skill">GitHub</span>
+        </div>
+      </article>
+
+      <article class="card social-card">
+        <h2>LinkedIn</h2>
+        <p>View my academic profile, projects, and professional updates.</p>
+        <a
+          class="social-btn linkedin-btn"
+          href="https://www.linkedin.com/in/prakruthisathish"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+      </article>
+
+      <article class="card social-card">
+        <h2>GitHub</h2>
+        <p>Browse my code repositories, projects, and contributions.</p>
+        <a
+          class="social-btn github-btn"
+          href="https://github.com/prakruthisathish"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+      </article>
+    </section>
+
+    <footer class="contact">
+      Open to internships and entry-level opportunities in software and web development.
+    </footer>
+  </main>
+</body>
+</html>
